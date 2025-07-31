@@ -51,6 +51,23 @@ const WatchPage = () => {
     }
   }, [id, episodeId, addToWatchHistory]);
 
+  const getVideoUrl = () => {
+    if (!movie) return null;
+    
+    // Ưu tiên sử dụng videoUrl nếu có, fallback về YouTube
+    if (movie.videoUrl) {
+      // Kiểm tra nếu là local file
+      if (movie.videoUrl.startsWith('/videos/')) {
+        return movie.videoUrl;
+      }
+      // Hoặc URL external
+      return movie.videoUrl;
+    }
+    
+    // Fallback về trailer YouTube nếu không có video chính
+    return movie.trailerUrl || `https://www.youtube.com/watch?v=dQw4w9WgXcQ`;
+  };
+
   const handlePlayerReady = () => {
     setTimeout(() => {
       setIsPlayerReady(true);
@@ -248,7 +265,7 @@ const WatchPage = () => {
           )}
 
           <ReactPlayer
-            url={videoUrl}
+            url={getVideoUrl()}
             width="100%"
             height="100%"
             style={{ position: "absolute", top: 0, left: 0 }}

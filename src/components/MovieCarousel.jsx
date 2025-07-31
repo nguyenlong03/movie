@@ -49,7 +49,7 @@ const MovieCarousel = ({ title, movies, size = "medium", viewAllLink }) => {
   return (
     <div className="mb-12 movie-carousel">
       <div className="flex items-center justify-between mb-4 px-4 sm:px-0">
-        <h2 className="text-2xl font-bold text-white">{title}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h2>
         {viewAllLink && (
           <Link
             to={viewAllLink}

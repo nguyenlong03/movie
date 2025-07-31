@@ -1,7 +1,7 @@
 export const FEATURED_MOVIE = {
   id: 1,
   title: 'Daredevil: Born Again',
-  backdropPath: 'https://images.pexels.com/photos/3697742/pexels-photo-3697742.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  backdropPath: 'https://m.media-amazon.com/images/M/MV5BMDRiNTBlY2EtZmRiZC00Mzc4LTljZDctNWQ5ZGY2NjUwNjE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', // Dark superhero cityscape
   description: 'Matt Murdock, một luật sư mù đã nhận được sức mạnh cảm giác đặc biệt sau khi mất thị lực do một tai nạn thời thơ ấu. Anh chiến đấu cho công lý thông qua cả vai trò luật sư ban ngày lẫn vai trò người hùng đeo mặt nạ Daredevil vào ban đêm, bảo vệ Hell\'s Kitchen khỏi tội phạm.',
   genres: ['Hành động', 'Tội phạm', 'Siêu anh hùng', 'Chính kịch'],
   year: 2024,
@@ -14,8 +14,8 @@ export const TRENDING_MOVIES = [
     id: 1,
     title: 'Thám Tử Tư: Phía Sau Vết Máu',
     originalTitle: 'Behind the Shadows',
-    posterPath: 'https://images.pexels.com/photos/3697742/pexels-photo-3697742.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/3697742/pexels-photo-3697742.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://cdn.moveek.com/storage/media/cache/tall/686bc73623da0467022793.jpg',
+    backdropPath: 'https://cdn.moveek.com/storage/media/cache/tall/686bc73623da0467022793.jpg',
     rating: 8.5,
     year: 2025,
     duration: '1h 43m',
@@ -29,6 +29,9 @@ export const TRENDING_MOVIES = [
     producer: ['Wishart Media', 'One Cool Pictures'],
     language: 'Tiếng Quảng Đông',
     subtitle: 'Tiếng Việt, Tiếng Anh',
+    // Thêm video URL - có thể là local file hoặc URL online
+    videoUrl: '/videos/movie1.mp4', // Local video file
+    trailerUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // YouTube trailer
     description: '5 vụ án mạng rúng động, một "trò chơi" sinh tử đầy uẩn khúc - và Cổ Thiên Lạc, trong vai thám tử tư, vô tình bị cuốn vào vòng xoáy kinh hoàng đó. Bí ẩn nối tiếp bí ẩn, ai sẽ là con mồi, ai mới là kẻ săn? Câu trả lời đang chờ được hé lộ…',
     genres: ['Chính Kịch', 'Chiếu Rạp', 'Kinh Dị', 'Hình Sự', 'Bí Ẩn']
   },
@@ -36,8 +39,8 @@ export const TRENDING_MOVIES = [
     id: 2,
     title: 'The Batman',
     originalTitle: 'The Batman',
-    posterPath: 'https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://upload.wikimedia.org/wikipedia/vi/0/07/Batman_2022_CGV.jpg', // Batman/dark knight themed
+    backdropPath: 'https://upload.wikimedia.org/wikipedia/vi/0/07/Batman_2022_CGV.jpg',
     rating: 8.5,
     year: 2022,
     duration: '2h 56m',
@@ -58,8 +61,8 @@ export const TRENDING_MOVIES = [
     id: 3,
     title: 'Người Nhện: Không Còn Nhà',
     originalTitle: 'Spider-Man: No Way Home',
-    posterPath: 'https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://baodongnai.com.vn/file/e7837c02876411cd0187645a2551379f/dataimages/202112/original/images2423438_18d.jpg', // Spider-Man/superhero themed
+    backdropPath: 'https://baodongnai.com.vn/file/e7837c02876411cd0187645a2551379f/dataimages/202112/original/images2423438_18d.jpg',
     rating: 8.2,
     year: 2021,
     duration: '2h 28m',
@@ -80,8 +83,8 @@ export const TRENDING_MOVIES = [
     id: 4,
     title: 'Biệt Đội Siêu Anh Hùng: Hồi Kết',
     originalTitle: 'Avengers: Endgame',
-    posterPath: 'https://images.pexels.com/photos/15663061/pexels-photo-15663061/free-photo-of-vintage-comic-book-covers.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/15663061/pexels-photo-15663061/free-photo-of-vintage-comic-book-covers.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://upload.wikimedia.org/wikipedia/vi/2/2d/Avengers_Endgame_bia_teaser.jpg', // Avengers/superhero team themed
+    backdropPath: 'https://upload.wikimedia.org/wikipedia/vi/2/2d/Avengers_Endgame_bia_teaser.jpg',
     rating: 8.4,
     year: 2019,
     duration: '3h 1m',
@@ -102,8 +105,8 @@ export const TRENDING_MOVIES = [
     id: 5,
     title: 'Avatar: Dòng Chảy Của Nước',
     originalTitle: 'Avatar: The Way of Water',
-    posterPath: 'https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://upload.wikimedia.org/wikipedia/vi/thumb/e/e0/Avatar_D%C3%B2ng_ch%E1%BA%A3y_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_-_Poster_ch%C3%ADnh_th%E1%BB%A9c.jpg/250px-Avatar_D%C3%B2ng_ch%E1%BA%A3y_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_-_Poster_ch%C3%ADnh_th%E1%BB%A9c.jpg',
+    backdropPath: 'https://upload.wikimedia.org/wikipedia/vi/thumb/e/e0/Avatar_D%C3%B2ng_ch%E1%BA%A3y_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_-_Poster_ch%C3%ADnh_th%E1%BB%A9c.jpg/250px-Avatar_D%C3%B2ng_ch%E1%BA%A3y_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_-_Poster_ch%C3%ADnh_th%E1%BB%A9c.jpg',
     rating: 7.6,
     year: 2022,
     duration: '3h 12m',
@@ -124,8 +127,8 @@ export const TRENDING_MOVIES = [
     id: 6,
     title: 'Top Gun: Maverick',
     originalTitle: 'Top Gun: Maverick',
-    posterPath: 'https://images.pexels.com/photos/442589/pexels-photo-442589.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/442589/pexels-photo-442589.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=600&q=80https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    backdropPath: 'https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     rating: 8.3,
     year: 2022,
     duration: '2h 10m',
@@ -146,8 +149,8 @@ export const TRENDING_MOVIES = [
     id: 7,
     title: 'Vệ Binh Dải Ngân Hà 3',
     originalTitle: 'Guardians of the Galaxy Vol. 3',
-    posterPath: 'https://images.pexels.com/photos/1569076/pexels-photo-1569076.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/1569076/pexels-photo-1569076.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=1600&h=900&fit=crop',
+    backdropPath: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1600&h=900&fit=crop',
     rating: 7.9,
     year: 2023,
     duration: '2h 30m',
@@ -170,56 +173,70 @@ export const NEW_RELEASES = [
   {
     id: 8,
     title: 'Oppenheimer',
-    posterPath: 'https://images.pexels.com/photos/6447207/pexels-photo-6447207.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?w=1600&h=900&fit=crop',
     rating: 8.8,
     year: 2023,
     duration: '3h 0m',
-    quality: '4K'
+    quality: '4K',
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Lịch Sử']
   },
   {
     id: 9,
     title: 'Barbie',
-    posterPath: 'https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1600&h=900&fit=crop',
     rating: 7.3,
     year: 2023,
     duration: '1h 54m',
-    quality: 'FullHD'
+    quality: 'FullHD',
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hài', 'Gia Đình']
   },
   {
     id: 10,
     title: 'Dune: Hành Tinh Cát - Phần 2',
-    posterPath: 'https://images.pexels.com/photos/4344784/pexels-photo-4344784.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1600&h=900&fit=crop',
     rating: 8.9,
     year: 2024,
     duration: '2h 46m',
-    quality: '4K'
+    quality: '4K',
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu', 'Khoa Học Viễn Tưởng']
   },
   {
     id: 11,
     title: 'Godzilla x Kong: Đế Chế Mới',
-    posterPath: 'https://images.pexels.com/photos/10867057/pexels-photo-10867057.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&h=900&fit=crop',
     rating: 7.5,
     year: 2024,
     duration: '1h 52m',
-    quality: 'FullHD'
+    quality: 'FullHD',
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu', 'Khoa Học Viễn Tưởng']
   },
   {
     id: 12,
     title: 'Vùng Đất Quỷ Dữ',
-    posterPath: 'https://images.pexels.com/photos/358532/pexels-photo-358532.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://static2.vieon.vn/vieplay-image/poster_v4/2021/07/12/5nh56axu_660x946-vungdatquydu1.jpg',
     rating: 6.9,
     year: 2024,
     duration: '1h 39m',
-    quality: 'HD'
+    quality: 'HD',
+    genres: ['Kinh Dị', 'Hành Động']
   },
   {
     id: 13,
     title: 'Kẻ Săn Mồi',
-    posterPath: 'https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1543946602-a0fce8117697?w=1600&h=900&fit=crop',
     rating: 7.2,
     year: 2023,
     duration: '1h 45m',
-    quality: 'FullHD'
+    quality: 'FullHD',
+    genres: ['Hành Động', 'Ly Kỳ']
   }
 ];
 
@@ -228,8 +245,8 @@ export const POPULAR_SERIES = [
     id: 14,
     title: 'House of the Dragon',
     originalTitle: 'House of the Dragon',
-    posterPath: 'https://images.pexels.com/photos/6669347/pexels-photo-6669347.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/6669347/pexels-photo-6669347.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://m.media-amazon.com/images/M/MV5BM2QzMGVkNjUtN2Y4Yi00ODMwLTg3YzktYzUxYjJlNjFjNDY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    backdropPath: 'https://m.media-amazon.com/images/M/MV5BM2QzMGVkNjUtN2Y4Yi00ODMwLTg3YzktYzUxYjJlNjFjNDY1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     rating: 8.4,
     year: 2022,
     duration: '60 phút/tập',
@@ -252,8 +269,8 @@ export const POPULAR_SERIES = [
     id: 15,
     title: 'The Last of Us',
     originalTitle: 'The Last of Us',
-    posterPath: 'https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/2239655/pexels-photo-2239655.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1520637736862-4d197d17c668?w=1600&h=900&fit=crop',
+    backdropPath: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=1600&h=900&fit=crop',
     rating: 8.7,
     year: 2023,
     duration: '55 phút/tập',
@@ -274,34 +291,35 @@ export const POPULAR_SERIES = [
   },
   {
     id: 16,
-    title: 'Wednesday',
-    originalTitle: 'Wednesday',
-    posterPath: 'https://images.pexels.com/photos/1061142/pexels-photo-1061142.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/1061142/pexels-photo-1061142.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    rating: 8.1,
-    year: 2022,
-    duration: '45 phút/tập',
-    quality: 'FullHD',
-    type: 'series',
-    episodes: 8,
-    totalSeasons: 1,
+    title: 'Cặp đôi hoàn hảo',
+    originalTitle: 'Perfect Match',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&h=900&fit=crop',
+    backdropPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1600&h=900&fit=crop',
+    rating: 7.5,
+    year: 2024,
+    duration: '2h 15m',
+    quality: 'HD',
+    type: 'movie',
     ageRating: 'T13',
-    status: 'Hoàn Thành',
-    country: 'Mỹ',
-    director: ['Alfred Gough', 'Miles Millar'],
-    cast: ['Jenna Ortega', 'Hunter Doohan', 'Percy Hynes White', 'Emma Myers'],
-    producer: ['Netflix', 'MGM Television'],
-    language: 'Tiếng Anh',
-    subtitle: 'Tiếng Việt, Tiếng Anh',
-    description: 'Theo chân Wednesday Addams tại học viện Nevermore, nơi cô học cách làm chủ khả năng ngoại cảm của mình, ngăn chặn một cuộc tàn sát quái vật và giải quyết bí ẩn giết người.',
-    genres: ['Bí Ẩn', 'Hài Hước', 'Kinh Dị', 'Siêu Nhiên']
+    status: 'Trực Tuyến',
+    country: 'Hàn Quốc',
+    director: ['Park Chan-wook', 'Kim Ji-eun'],
+    cast: ['Song Joong-ki', 'Park Bo-young', 'Lee Jong-suk', 'IU'],
+    producer: ['CJ Entertainment', 'NEW Pictures'],
+    language: 'Tiếng Hàn',
+    subtitle: 'Tiếng Việt, Tiếng Anh, Tiếng Trung',
+    // Video URLs cho movie ID 16 (trang watch hiện tại)
+    videoUrl: '/videos/perfect-match.mp4', // Local video file
+    trailerUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    description: 'Một câu chuyện tình yêu hiện đại về hai người trẻ tìm thấy nhau qua một ứng dụng hẹn hò, nhưng phát hiện ra rằng họ đã gặp nhau trong quá khứ.',
+    genres: ['Tình Cảm', 'Hài', 'Lãng Mạn']
   },
   {
     id: 17,
     title: 'Loki: Phần 2',
     originalTitle: 'Loki: Season 2',
-    posterPath: 'https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1447433819943-74a20887a81e?w=600&q=80',
+    backdropPath: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=1600&q=80',
     rating: 8.2,
     year: 2023,
     duration: '50 phút/tập',
@@ -324,8 +342,8 @@ export const POPULAR_SERIES = [
     id: 18,
     title: 'Squid Game',
     originalTitle: '오징어 게임',
-    posterPath: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1478028928718-7bfdb1b136c8?w=600&q=80',
+    backdropPath: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1600&q=80',
     rating: 8.0,
     year: 2021,
     duration: '55 phút/tập',
@@ -348,8 +366,8 @@ export const POPULAR_SERIES = [
     id: 19,
     title: 'Stranger Things: Phần 4',
     originalTitle: 'Stranger Things: Season 4',
-    posterPath: 'https://images.pexels.com/photos/669993/pexels-photo-669993.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    backdropPath: 'https://images.pexels.com/photos/669993/pexels-photo-669993.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+    backdropPath: 'https://images.unsplash.com/photo-1549945778-76bf6877c431?w=1600&q=80',
     rating: 8.6,
     year: 2022,
     duration: '75 phút/tập',
@@ -374,72 +392,620 @@ export const TOP_RATED_MOVIES = [
   {
     id: 20,
     title: 'The Shawshank Redemption',
-    posterPath: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
     rating: 9.3,
-    year: 1994
+    year: 1994,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 21,
     title: 'The Godfather',
-    posterPath: 'https://images.pexels.com/photos/821738/pexels-photo-821738.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
     rating: 9.2,
-    year: 1972
+    year: 1972,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 22,
     title: 'The Dark Knight',
-    posterPath: 'https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&q=80',
     rating: 9.0,
-    year: 2008
+    year: 2008,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 23,
     title: 'Pulp Fiction',
-    posterPath: 'https://images.pexels.com/photos/2686558/pexels-photo-2686558.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=600&q=80',
     rating: 8.9,
-    year: 1994
+    year: 1994,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 24,
     title: 'Fight Club',
-    posterPath: 'https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1533588126091-84f6da6e7cbc?w=600&q=80',
     rating: 8.8,
-    year: 1999
+    year: 1999,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 25,
     title: 'Inception',
-    posterPath: 'https://images.pexels.com/photos/1557183/pexels-photo-1557183.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&q=80',
     rating: 8.8,
-    year: 2010
+    year: 2010,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 26,
     title: 'Interstellar',
-    posterPath: 'https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1446776431622-eef10bac3afd?w=600&q=80',
     rating: 8.7,
-    year: 2014
+    year: 2014,
+    country: 'Mỹ',
+    type: 'movie'
   },
   {
     id: 27,
     title: 'Parasite',
-    posterPath: 'https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
     rating: 8.5,
-    year: 2019
+    year: 2019,
+    country: 'Hàn Quốc',
+    type: 'movie'
   },
   {
     id: 28,
     title: 'Bố Già',
-    posterPath: 'https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
     rating: 8.5,
-    year: 2021
+    year: 2021,
+    country: 'Việt Nam',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Gia Đình']
   },
   {
     id: 29,
     title: 'Nhà Bà Nữ',
-    posterPath: 'https://images.pexels.com/photos/5273651/pexels-photo-5273651.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
     rating: 8.2,
-    year: 2023
+    year: 2023,
+    country: 'Việt Nam',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Tình Cảm']
+  },
+  {
+    id: 40,
+    title: 'RRR',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 8.0,
+    year: 2022,
+    country: 'Ấn Độ'
+  },
+  {
+    id: 41,
+    title: 'Amélie',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 8.3,
+    year: 2001,
+    country: 'Pháp'
+  },
+  {
+    id: 42,
+    title: 'Four Weddings and a Funeral',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 7.1,
+    year: 1994,
+    country: 'Anh'
+  },
+  {
+    id: 43,
+    title: 'Mad Max: Fury Road',
+    posterPath: 'https://images.unsplash.com/photo-1543946602-a0fce8117697?w=600&q=80',
+    rating: 8.1,
+    year: 2015,
+    country: 'Úc'
+  },
+  {
+    id: 44,
+    title: 'Crocodile Dundee',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 6.6,
+    year: 1986,
+    country: 'Úc'
+  },
+  {
+    id: 45,
+    title: 'Infernal Affairs',
+    posterPath: 'https://images.unsplash.com/photo-1551193244-30a623476fba?w=600&q=80',
+    rating: 8.0,
+    year: 2002,
+    country: 'Hồng Kông'
+  },
+  {
+    id: 46,
+    title: 'Chungking Express',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 8.1,
+    year: 1994,
+    country: 'Hồng Kông'
+  },
+  {
+    id: 47,
+    title: 'Crouching Tiger, Hidden Dragon',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 7.9,
+    year: 2000,
+    country: 'Đài Loan'
+  },
+  {
+    id: 48,
+    title: 'Eat Drink Man Woman',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.8,
+    year: 1994,
+    country: 'Đài Loan'
+  },
+  {
+    id: 49,
+    title: 'Ong Bak',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 7.2,
+    year: 2003,
+    country: 'Thái Lan'
+  },
+  {
+    id: 50,
+    title: 'The Beach',
+    posterPath: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+    rating: 6.6,
+    year: 2000,
+    country: 'Thái Lan'
+  },
+  {
+    id: 51,
+    title: '3 Idiots',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 8.4,
+    year: 2009,
+    country: 'Ấn Độ'
+  },
+  {
+    id: 52,
+    title: 'Dangal',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 8.4,
+    year: 2016,
+    country: 'Ấn Độ'
+  },
+  {
+    id: 53,
+    title: 'The Artist',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 7.9,
+    year: 2011,
+    country: 'Pháp'
+  },
+  {
+    id: 54,
+    title: 'La Vie en Rose',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.5,
+    year: 2007,
+    country: 'Pháp'
+  },
+  {
+    id: 55,
+    title: 'The King\'s Speech',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 8.0,
+    year: 2010,
+    country: 'Anh'
+  },
+  {
+    id: 56,
+    title: 'Slumdog Millionaire',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 8.0,
+    year: 2008,
+    country: 'Anh'
+  },
+  {
+    id: 57,
+    title: 'Mắt Biếc',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.2,
+    year: 2019,
+    country: 'Việt Nam',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Tình Cảm']
+  },
+  {
+    id: 58,
+    title: 'Tôi Thấy Hoa Vàng Trên Cỏ Xanh',
+    posterPath: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+    rating: 7.0,
+    year: 2015,
+    country: 'Việt Nam',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Gia Đình']
+  },
+  {
+    id: 59,
+    title: 'Hero',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 7.9,
+    year: 2002,
+    country: 'Trung Quốc',
+    type: 'movie'
+  },
+  {
+    id: 60,
+    title: 'House of Flying Daggers',
+    posterPath: 'https://images.unsplash.com/photo-1551193244-30a623476fba?w=600&q=80',
+    rating: 7.5,
+    year: 2004,
+    country: 'Trung Quốc',
+    type: 'movie'
+  },
+  // Thêm phim bom tấn
+  {
+    id: 61,
+    title: 'Fast & Furious X',
+    posterPath: 'https://images.unsplash.com/photo-1543946602-a0fce8117697?w=600&q=80',
+    rating: 8.2,
+    year: 2023,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu']
+  },
+  {
+    id: 62,
+    title: 'John Wick: Chapter 4',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 8.5,
+    year: 2023,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Ly Kỳ']
+  },
+  {
+    id: 63,
+    title: 'Mission: Impossible – Dead Reckoning',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 8.1,
+    year: 2023,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu', 'Ly Kỳ']
+  },
+  // Thêm phim kinh điển
+  {
+    id: 64,
+    title: 'Casablanca',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 8.8,
+    year: 1942,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Tình Cảm']
+  },
+  {
+    id: 65,
+    title: 'Gone with the Wind',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 8.1,
+    year: 1939,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Tình Cảm']
+  },
+  {
+    id: 66,
+    title: 'Citizen Kane',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 8.9,
+    year: 1941,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch']
+  },
+  // Thêm phim độc lập
+  {
+    id: 67,
+    title: 'Moonlight',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 7.8,
+    year: 2016,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch']
+  },
+  {
+    id: 68,
+    title: 'Lady Bird',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.9,
+    year: 2017,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Hài']
+  },
+  {
+    id: 69,
+    title: 'The Grand Budapest Hotel',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 8.1,
+    year: 2014,
+    country: 'Anh',
+    type: 'movie',
+    genres: ['Chính Kịch', 'Hài']
+  },
+  // Thêm phim tài liệu
+  {
+    id: 70,
+    title: 'March of the Penguins',
+    posterPath: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+    rating: 7.5,
+    year: 2005,
+    country: 'Pháp',
+    type: 'movie',
+    genres: ['Tài Liệu', 'Gia Đình']
+  },
+  {
+    id: 71,
+    title: 'An Inconvenient Truth',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 7.4,
+    year: 2006,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Tài Liệu']
+  },
+  {
+    id: 72,
+    title: 'Planet Earth',
+    posterPath: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+    rating: 9.4,
+    year: 2006,
+    country: 'Anh',
+    type: 'series',
+    genres: ['Tài Liệu']
+  },
+  // Thêm phim hoạt hình
+  {
+    id: 73,
+    title: 'Spirited Away',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 9.0,
+    year: 2001,
+    country: 'Nhật Bản',
+    type: 'movie',
+    genres: ['Hoạt Hình', 'Gia Đình', 'Giả Tưởng']
+  },
+  {
+    id: 74,
+    title: 'Toy Story',
+    posterPath: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
+    rating: 8.3,
+    year: 1995,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hoạt Hình', 'Gia Đình', 'Hài']
+  },
+  {
+    id: 75,
+    title: 'Finding Nemo',
+    posterPath: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+    rating: 8.2,
+    year: 2003,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hoạt Hình', 'Gia Đình', 'Phiêu Lưu']
+  },
+  {
+    id: 76,
+    title: 'Frozen',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.4,
+    year: 2013,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hoạt Hình', 'Gia Đình', 'Nhạc Kịch']
+  },
+  // Thêm phim tình cảm
+  {
+    id: 77,
+    title: 'The Notebook',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.8,
+    year: 2004,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Tình Cảm', 'Chính Kịch']
+  },
+  {
+    id: 78,
+    title: 'Titanic',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 7.9,
+    year: 1997,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Tình Cảm', 'Chính Kịch']
+  },
+  // Thêm phim kinh dị
+  {
+    id: 79,
+    title: 'The Conjuring',
+    posterPath: 'https://images.unsplash.com/photo-1520637836862-4d197d17c668?w=600&q=80',
+    rating: 7.5,
+    year: 2013,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Kinh Dị', 'Siêu Nhiên']
+  },
+  {
+    id: 80,
+    title: 'Get Out',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 7.7,
+    year: 2017,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Kinh Dị', 'Ly Kỳ']
+  },
+  // Thêm phim bom tấn
+  {
+    id: 81,
+    title: 'Avengers: Endgame',
+    posterPath: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&q=80',
+    rating: 8.4,
+    year: 2019,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Siêu Anh Hùng', 'Phiêu Lưu', 'Bom Tấn']
+  },
+  {
+    id: 82,
+    title: 'Spider-Man: No Way Home',
+    posterPath: 'https://images.unsplash.com/photo-1635863138275-d9864d3584fd?w=600&q=80',
+    rating: 8.2,
+    year: 2021,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Siêu Anh Hùng', 'Phiêu Lưu', 'Bom Tấn']
+  },
+  {
+    id: 83,
+    title: 'Dune',
+    posterPath: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&q=80',
+    rating: 8.0,
+    year: 2021,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu', 'Khoa Học Viễn Tưởng', 'Bom Tấn']
+  },
+  {
+    id: 84,
+    title: 'Top Gun: Maverick',
+    posterPath: 'https://images.unsplash.com/photo-1551193244-30a623476fba?w=600&q=80',
+    rating: 8.3,
+    year: 2022,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Phiêu Lưu', 'Bom Tấn']
+  },
+  {
+    id: 85,
+    title: 'Black Panther',
+    posterPath: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&q=80',
+    rating: 7.3,
+    year: 2018,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Siêu Anh Hùng', 'Phiêu Lưu', 'Bom Tấn']
+  },
+  {
+    id: 86,
+    title: 'Wonder Woman',
+    posterPath: 'https://images.unsplash.com/photo-1635863138275-d9864d3584fd?w=600&q=80',
+    rating: 7.4,
+    year: 2017,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hành Động', 'Siêu Anh Hùng', 'Phiêu Lưu', 'Bom Tấn']
+  },
+  // Thêm phim hài
+  {
+    id: 87,
+    title: 'The Hangover',
+    posterPath: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80',
+    rating: 7.7,
+    year: 2009,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hài', 'Phiêu Lưu']
+  },
+  {
+    id: 88,
+    title: 'Tropic Thunder',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.0,
+    year: 2008,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Hài', 'Hành Động']
+  },
+  // Thêm phim thể thao
+  {
+    id: 89,
+    title: 'Rocky',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 8.1,
+    year: 1976,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Thể Thao', 'Chính Kịch']
+  },
+  {
+    id: 90,
+    title: 'The Karate Kid',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
+    rating: 7.3,
+    year: 1984,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Thể Thao', 'Gia Đình', 'Chính Kịch']
+  },
+  // Thêm phim âm nhạc
+  {
+    id: 91,
+    title: 'A Star Is Born',
+    posterPath: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    rating: 7.6,
+    year: 2018,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Âm Nhạc', 'Chính Kịch', 'Tình Cảm']
+  },
+  {
+    id: 92,
+    title: 'La La Land',
+    posterPath: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&q=80',
+    rating: 8.0,
+    year: 2016,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Nhạc Kịch', 'Tình Cảm', 'Chính Kịch']
+  },
+  // Thêm phim giả tưởng
+  {
+    id: 93,
+    title: 'The Lord of the Rings',
+    posterPath: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&q=80',
+    rating: 8.8,
+    year: 2001,
+    country: 'Mỹ',
+    type: 'movie',
+    genres: ['Giả Tưởng', 'Phiêu Lưu', 'Hành Động']
+  },
+  {
+    id: 94,
+    title: 'Harry Potter',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
+    rating: 7.6,
+    year: 2001,
+    country: 'Anh',
+    type: 'movie',
+    genres: ['Giả Tưởng', 'Gia Đình', 'Phiêu Lưu']
   }
 ];
 
@@ -459,70 +1025,70 @@ export const SIMILAR_MOVIES = [
   {
     id: 30,
     title: 'The Punisher',
-    posterPath: 'https://images.pexels.com/photos/1547813/pexels-photo-1547813.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
     rating: 8.5,
     year: 2017
   },
   {
     id: 31,
     title: 'Jessica Jones',
-    posterPath: 'https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1551193244-30a623476fba?w=600&q=80',
     rating: 7.9,
     year: 2015
   },
   {
     id: 32,
     title: 'Luke Cage',
-    posterPath: 'https://images.pexels.com/photos/592077/pexels-photo-592077.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1635863138275-d9864d3584fd?w=600&q=80',
     rating: 7.3,
     year: 2016
   },
   {
     id: 33,
     title: 'Iron Fist',
-    posterPath: 'https://images.pexels.com/photos/2128028/pexels-photo-2128028.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&q=80',
     rating: 6.4,
     year: 2017
   },
   {
     id: 34,
     title: 'The Defenders',
-    posterPath: 'https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&q=80',
     rating: 7.2,
     year: 2017
   },
   {
     id: 35,
     title: 'Hawkeye',
-    posterPath: 'https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1447433819943-74a20887a81e?w=600&q=80',
     rating: 7.5,
     year: 2021
   },
   {
     id: 36,
     title: 'Moon Knight',
-    posterPath: 'https://images.pexels.com/photos/5486845/pexels-photo-5486845.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=600&q=80',
     rating: 7.3,
     year: 2022
   },
   {
     id: 37,
     title: 'Mũ Đỏ: Người Trộm Mặt',
-    posterPath: 'https://images.pexels.com/photos/3645553/pexels-photo-3645553.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1520637836862-4d197d17c668?w=600&q=80',
     rating: 7.0,
     year: 2023
   },
   {
     id: 38,
     title: 'Gotham Knights',
-    posterPath: 'https://images.pexels.com/photos/751373/pexels-photo-751373.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80',
     rating: 6.5,
     year: 2022
   },
   {
     id: 39,
     title: 'Arrow',
-    posterPath: 'https://images.pexels.com/photos/1436131/pexels-photo-1436131.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    posterPath: 'https://images.unsplash.com/photo-1543946602-a0fce8117697?w=600&q=80',
     rating: 7.5,
     year: 2012
   }

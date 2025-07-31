@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Search, X, Menu, Film, Bell, User, ChevronDown } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Header = () => {
+  const { isDark } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,6 +44,8 @@ const Header = () => {
     { name: "Kinh dị", path: "/genre/kinh-di" },
     { name: "Khoa học viễn tưởng", path: "/genre/khoa-hoc-vien-tuong" },
     { name: "Phiêu lưu", path: "/genre/phieu-luu" },
+    { name: "Chính kịch", path: "/genre/chinh-kich" },
+    { name: "Siêu anh hùng", path: "/genre/sieu-anh-hung" },
   ];
 
   const countryLinks = [
@@ -48,8 +53,13 @@ const Header = () => {
     { name: " Mỹ", path: "/country/my" },
     { name: " Hàn Quốc", path: "/country/han-quoc" },
     { name: " Trung Quốc", path: "/country/trung-quoc" },
-    { name: " Nhật Bản", path: "/country/nhat-ban" },
+    { name: " Hồng Kông", path: "/country/hong-kong" },
     { name: " Thái Lan", path: "/country/thai-lan" },
+    { name: " Úc", path: "/country/uc" },
+    { name: "Đài Loan", path: "/country/dai-loan" },
+    { name: " Ấn Độ", path: "/country/an-do" },
+    { name: " Pháp", path: "/country/phap" },
+    { name: " Anh", path: "/country/anh" },
   ];
 
   const actorLinks = [
@@ -60,11 +70,16 @@ const Header = () => {
   ];
 
   const topicLinks = [
-    { name: "Phim bom tấn", path: "/topic/blockbuster" },
-    { name: "Phim kinh điển", path: "/topic/classic" },
-    { name: "Phim độc lập", path: "/topic/independent" },
-    { name: "Phim tài liệu", path: "/topic/documentary" },
-    { name: "Phim hoạt hình", path: "/topic/animation" },
+    { name: "🎬 Phim bom tấn", path: "/topic/blockbuster" },
+    { name: "🏆 Phim kinh điển", path: "/topic/classic" },
+    { name: "🎭 Phim độc lập", path: "/topic/independent" },
+    { name: "📚 Phim tài liệu", path: "/topic/documentary" },
+    { name: "🎨 Phim hoạt hình", path: "/topic/animation" },
+    { name: "💕 Phim tình cảm", path: "/topic/romance" },
+    { name: "👻 Phim kinh dị", path: "/topic/horror" },
+    { name: "😂 Phim hài", path: "/topic/comedy" },
+    { name: "🦸 Siêu anh hùng", path: "/topic/superhero" },
+    { name: "🚀 Khoa học viễn tưởng", path: "/topic/sci-fi" },
   ];
 
   const discoverLinks = [
@@ -78,13 +93,16 @@ const Header = () => {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-gray-900/95 backdrop-blur-sm shadow-lg"
-            : "bg-gradient-to-b from-gray-900/80 to-transparent"
+            ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg"
+            : "bg-gradient-to-b from-white/80 dark:from-gray-900/80 to-transparent"
         }`}
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white"
+            >
               <Film className="text-orange-500" size={28} />
               <span className="hidden sm:block">MOVIE DEV</span>
             </Link>
@@ -95,69 +113,75 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="font-medium hover:text-orange-500 transition-colors"
+                className="font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors"
               >
                 {link.name}
               </Link>
             ))}
             <div className="relative group">
-              <button className="flex items-center font-medium hover:text-orange-500 transition-colors">
+              <button className="flex items-center font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 Thể loại <ChevronDown size={16} className="ml-1" />
               </button>
-              <div className="absolute top-full left-0 bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[150px] p-2 mt-2">
-                {genreLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.path}
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[200px] p-2 mt-2 z-50 border border-gray-200 dark:border-gray-700">
+                <div className="grid grid-cols-1 gap-1">
+                  {genreLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-sm transition-colors text-gray-700 dark:text-gray-300"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="relative group">
-              <button className="flex items-center font-medium hover:text-orange-500 transition-colors">
+              <button className="flex items-center font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 Quốc gia <ChevronDown size={16} className="ml-1" />
               </button>
-              <div className="absolute top-full left-0 bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[150px] p-2 mt-2">
-                {countryLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.path}
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[180px] p-2 mt-2 z-50 border border-gray-200 dark:border-gray-700">
+                <div className="grid grid-cols-1 gap-1">
+                  {countryLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-sm transition-colors whitespace-nowrap text-gray-700 dark:text-gray-300"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="relative group">
-              <button className="flex items-center font-medium hover:text-orange-500 transition-colors">
+              <button className="flex items-center font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 Chủ đề <ChevronDown size={16} className="ml-1" />
               </button>
-              <div className="absolute top-full left-0 bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[150px] p-2 mt-2">
-                {topicLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.path}
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[220px] p-2 mt-2 z-50 border border-gray-200 dark:border-gray-700">
+                <div className="grid grid-cols-1 gap-1">
+                  {topicLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-sm transition-colors whitespace-nowrap text-gray-700 dark:text-gray-300"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="relative group">
-              <button className="flex items-center font-medium hover:text-orange-500 transition-colors">
+              <button className="flex items-center font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors">
                 Khám phá <ChevronDown size={16} className="ml-1" />
               </button>
-              <div className="absolute top-full left-0 bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[150px] p-2 mt-2">
+              <div className="absolute top-full left-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[150px] p-2 mt-2 border border-gray-200 dark:border-gray-700">
                 {discoverLinks.map((link) => (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-700 dark:text-gray-300"
                   >
                     {link.name}
                   </Link>
@@ -174,13 +198,13 @@ const Header = () => {
                   placeholder="Tìm kiếm phim..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-gray-800 text-white rounded-full py-2 pl-4 pr-10 w-[150px] sm:w-[250px] focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-full py-2 pl-4 pr-10 w-[150px] sm:w-[250px] focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-gray-600"
                   autoFocus
                 />
                 <button
                   type="button"
                   onClick={() => setSearchOpen(false)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-white"
                 >
                   <X size={18} />
                 </button>
@@ -188,55 +212,61 @@ const Header = () => {
             ) : (
               <button
                 onClick={() => setSearchOpen(true)}
-                className="p-2 rounded-full hover:bg-gray-800 transition-colors"
+                className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
               >
                 <Search size={20} />
               </button>
             )}
 
-            <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
+            <button className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               <Bell size={20} />
             </button>
 
             <div className="relative">
               <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
-                className="flex items-center gap-2 p-1 hover:bg-gray-800 rounded-full transition-colors"
+                className="flex items-center gap-2 p-1 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-full transition-colors"
               >
-                <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
-                  <User size={18} className="text-gray-400" />
+                <div className="w-8 h-8 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+                  <User
+                    size={18}
+                    className="text-gray-600 dark:text-gray-400"
+                  />
                 </div>
               </button>
 
               {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg py-2 z-50">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-2 z-50 border border-gray-200 dark:border-gray-700">
                   <Link
                     to="/playlist"
-                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
                   >
                     Danh sách phát
                   </Link>
                   <Link
                     to="/login"
-                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
                   >
                     Đăng nhập
                   </Link>
                   <Link
                     to="/register"
-                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
                   >
                     Đăng ký
                   </Link>
                   <Link
                     to="/settings"
-                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
                   >
                     Cài đặt
                   </Link>
                   <Link
                     to="/help"
-                    className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
                   >
                     Trợ giúp
                   </Link>
@@ -246,7 +276,7 @@ const Header = () => {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-full hover:bg-gray-800 transition-colors md:hidden"
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors md:hidden text-gray-700 dark:text-gray-300"
             >
               <Menu size={20} />
             </button>
@@ -256,7 +286,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-gray-900/95 z-40 md:hidden transition-transform duration-300 ${
+        className={`fixed inset-0 bg-white/95 dark:bg-gray-900/95 z-40 md:hidden transition-transform duration-300 ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -266,20 +296,20 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-lg font-medium hover:text-orange-500 transition-colors py-2"
+                className="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-orange-500 transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
 
-            <div className="border-t border-gray-700 pt-4 mt-4">
+            <div className="border-t border-gray-300 dark:border-gray-700 pt-4 mt-4">
               <p className="text-orange-500 font-semibold mb-2">Thể loại</p>
               {genreLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
+                  className="block text-gray-600 dark:text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -287,13 +317,13 @@ const Header = () => {
               ))}
             </div>
 
-            <div className="border-t border-gray-700 pt-4 mt-4">
+            <div className="border-t border-gray-300 dark:border-gray-700 pt-4 mt-4">
               <p className="text-orange-500 font-semibold mb-2">Quốc gia</p>
               {countryLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
+                  className="block text-gray-600 dark:text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -301,13 +331,13 @@ const Header = () => {
               ))}
             </div>
 
-            <div className="border-t border-gray-700 pt-4 mt-4">
+            <div className="border-t border-gray-300 dark:border-gray-700 pt-4 mt-4">
               <p className="text-orange-500 font-semibold mb-2">Chủ đề</p>
               {topicLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
+                  className="block text-gray-600 dark:text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -315,13 +345,13 @@ const Header = () => {
               ))}
             </div>
 
-            <div className="border-t border-gray-700 pt-4 mt-4">
+            <div className="border-t border-gray-300 dark:border-gray-700 pt-4 mt-4">
               <p className="text-orange-500 font-semibold mb-2">Khám phá</p>
               {discoverLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
+                  className="block text-gray-600 dark:text-gray-300 hover:text-orange-500 transition-colors py-1 pl-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}

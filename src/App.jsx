@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
@@ -15,13 +16,20 @@ import AllMoviesPage from "./pages/AllMoviesPage";
 import WatchPage from "./pages/WatchPage";
 import ActorsPage from "./pages/ActorsPage";
 import PlaylistPage from "./pages/PlaylistPage";
+import CountryPage from "./pages/CountryPage";
+import TopicPage from "./pages/TopicPage";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   return (
-    <>
-      <Router>
+    <ThemeProvider>
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
@@ -29,6 +37,9 @@ function App() {
             <Route path="search" element={<SearchResultsPage />} />
             <Route path="movies" element={<MovieListPage title="Phim lẻ" />} />
             <Route path="series" element={<MovieListPage title="Phim bộ" />} />
+            <Route path="genre/:genre" element={<GenrePage />} />
+            <Route path="country/:country" element={<CountryPage />} />
+            <Route path="topic/:topic" element={<TopicPage />} />
             <Route
               path="schedule"
               element={<PlaceholderPage title="Lịch chiếu" />}
@@ -67,15 +78,11 @@ function App() {
             <Route path="view-all/:category" element={<AllMoviesPage />} />
             <Route path="genre/:genreName" element={<GenrePage />} />
 
-            {/* Country routes */}
-            <Route path="country/:name" element={<PlaceholderPage />} />
+            {/* Country routes - sử dụng dynamic routing */}
+            <Route path="country/:country" element={<CountryPage />} />
 
-            {/* Topic routes */}
-            <Route path="topic/blockbuster" element={<PlaceholderPage />} />
-            <Route path="topic/classic" element={<PlaceholderPage />} />
-            <Route path="topic/independent" element={<PlaceholderPage />} />
-            <Route path="topic/documentary" element={<PlaceholderPage />} />
-            <Route path="topic/animation" element={<PlaceholderPage />} />
+            {/* Topic routes - sử dụng dynamic routing */}
+            <Route path="topic/:topic" element={<TopicPage />} />
           </Route>{" "}
           {/* Routes without MainLayout */}
           <Route path="login" element={<LoginPage />} />
@@ -85,7 +92,7 @@ function App() {
         </Routes>
       </Router>
       <ToastContainer />
-    </>
+    </ThemeProvider>
   );
 }
 

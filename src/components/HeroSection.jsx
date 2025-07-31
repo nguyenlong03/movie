@@ -22,7 +22,7 @@ const HeroSection = ({ movie }) => {
             {movie.title}
           </h1>
           
-          <div className="flex items-center gap-4 text-base text-gray-300 mb-6">
+          <div className="flex items-center gap-4 text-base text-gray-200 dark:text-gray-300 mb-6">
             <span className="flex items-center gap-2 px-3 py-1 bg-red-600 text-white rounded-md font-bold text-lg">
               {movie.rating.toFixed(1)}
             </span>
@@ -42,7 +42,7 @@ const HeroSection = ({ movie }) => {
             ))}
           </div>
           
-          <p className="text-gray-200 mb-8 line-clamp-3 md:line-clamp-4 text-lg max-w-3xl">
+          <p className="text-gray-200 dark:text-gray-300 mb-8 line-clamp-3 md:line-clamp-4 text-lg max-w-3xl">
             {movie.description}
           </p>
           

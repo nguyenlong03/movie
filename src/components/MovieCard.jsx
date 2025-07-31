@@ -31,7 +31,7 @@ const MovieCard = ({ movie, size = "medium" }) => {
 
   return (
     <div
-      className={`${sizeClasses[size]} group relative aspect-[2/3] overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl`}
+      className={`${sizeClasses[size]} group relative aspect-[2/3] overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl dark:shadow-gray-800`}
     >
       {/* --- BACKGROUND IMAGE & GRADIENT --- */}
       <img
@@ -44,7 +44,7 @@ const MovieCard = ({ movie, size = "medium" }) => {
       {/* --- DEFAULT VISIBLE CONTENT (Bottom) --- */}
       <div className="absolute bottom-0 left-0 right-0 p-3 text-white transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-4">
         <h3 className="font-bold text-base truncate">{movie.title}</h3>
-        <div className="flex items-center justify-between text-xs text-gray-300 mt-1">
+        <div className="flex items-center justify-between text-xs text-gray-200 dark:text-gray-300 mt-1">
           <span>{movie.year}</span>
           <div className="flex items-center gap-1">
             <Star size={12} fill="currentColor" className="text-yellow-400" />
@@ -61,7 +61,7 @@ const MovieCard = ({ movie, size = "medium" }) => {
       >
         <h3 className="font-bold text-lg mb-2">{movie.title}</h3>
 
-        <div className="flex items-center gap-3 text-sm text-gray-300 mb-3">
+        <div className="flex items-center gap-3 text-sm text-gray-200 dark:text-gray-300 mb-3">
           <div className="flex items-center gap-1 text-yellow-400">
             <Star size={16} fill="currentColor" />
             <span className="font-bold">{movie.rating.toFixed(1)}</span>
@@ -70,7 +70,7 @@ const MovieCard = ({ movie, size = "medium" }) => {
           {movie.duration && <span>{movie.duration}</span>}
         </div>
 
-        <p className="text-xs text-gray-300 mb-4 line-clamp-3">
+        <p className="text-xs text-gray-200 dark:text-gray-300 mb-4 line-clamp-3">
           {movie.description || "No description available."}
         </p>
 

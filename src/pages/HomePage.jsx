@@ -10,7 +10,7 @@ import {
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-900 min-h-screen">
       <HeroSection movie={FEATURED_MOVIE} />
 
       <div className="container mx-auto px-4 py-8">
